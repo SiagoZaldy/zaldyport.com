@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*Navbar */
+.navbar{
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    top:0;
+    left: auto;
+    
+}
+.a1{
+    position: fixed;
+    top: 10px;
+    right: 340px;
+    border: solid 1px;
+    background: #3212a752;
+}
+.a2{
+    position: fixed;
+    right: 265px;
+    top: 10px;
+    border: solid 1px;
+    background: #3212a752;
+}
+.a3{
+    position: fixed;
+    right: 185px;
+    top: 10px;
+    border: solid 1px;
+    background: #3212a752;
+}
+.a4{
+    position: fixed;
+    right: 110px;
+    top: 10px;
+    border: solid 1px;
+    background: #3212a752;
+}
+.a5{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    border: solid 1px;
+    background: #3212a752;
+}
+.navbar{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+a{
+     text-decoration: none;
+     color: white;
+     width: auto;
+     transition: all .5s ease;
+}
+.navbar a:hover{
+    background: #55f9ffbe;
+    color: black;
+    box-shadow: 0 0 10px #53e5f8;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+#home::before{
+    content:"";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 900px;
+    width: 100%;
+    background: url('hpic.jpg') no-repeat center center/cover;
+    z-index: -1;          
+    opacity: .8;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid white; */
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    right:10%;
+}
+.headings{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+/* About Section */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: transparent;
+    
+
+
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 575px;
+    height: 400px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* My job Section */
+#myjob{
+    display: flex;
+    flex-direction: column;
+    background-color:grey;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+.gallery img{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+/* Skills Section */
+#services{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.row{
+    display: list-item;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.htmlA1 img, .cssA1 img, .jsA1 img, .phpA1 img, .mysqlA1 img, .pyA1 img{
+    position: relative;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    height: 70px;   
+    width: 50px;
+    border: 1px solid rgb(112, 23, 23);
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    /*padding: 10px;*/
+    border-radius:15px;
+    background: linear-gradient(180deg, #aeeef7de, #232829);
+    background-size:100% 200%;
+    transition: width 2s, height 4s;
+}
+
+.hp{
+    position: relative;
+    top: -50px;
+    left: 25%;
+    height: 20px;
+    width: 50%;
+    background: #eb2222;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.cp{
+    position: relative;
+    left: 25%;
+    top: -60px;
+    height: 20px;
+    width: 60%;
+    background: #2b5d96;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.jp{
+    position: relative;
+    left: 25%;
+    top: -60px;
+    height: 20px;
+    width: 40%;
+    background: #e4e726;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.pp{
+    position: relative;
+    left: 25%;
+    top: -50px;
+    height: 20px;
+    width: 40%;
+    background: #1768b4;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.mp{
+    position: relative;
+    left: 25%;
+    top: -50px;
+    height: 20px;
+    width: 35%;
+    background: #ec9d09a4;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.pyp{
+    position: relative;
+    left: 25%;
+    top: -50px;
+    height: 20px;
+    width: 45%;
+    background: #ff0062;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+/* Contact Section */
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #220e309d;
+    color: wheat;
+    padding: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 0px;
+} .input{
+    padding: 12px;
+    margin: 15px;
+    width: 250px;
+    border: none;
+    outline: none;
+}
+#msg{
+    width: 250px;
+    padding: 10px;
+    margin: 15px;
+    border: none;
+    outline: none;
+
+}
+#send{
+    padding: 10px;
+    width: 100px;
+    margin: 40px;
+    border: none;
+    outline: none;
+    background: rgb(3, 187, 34);
+}
+#send:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        
+            <a class="a1" href="#home"><h4>HOME</h4></a>
+            <a class="a2" href="#about"><h4>ABOUT</h4></a>
+            <a class="a3" href="#myjob"><h4>MY JOB</h4></a>
+            <a class="a4" href="#skills"><h4>SKILLS</h4></a>
+            <a class="a5" href="#contact"><h4>CONTACT</h4></a>
+        
+    </nav>
+
+     <section id="home">
+        <div class= "main">
+        </div>
+        <p><h3>Welcome to my web my friend I am Zady C. Siago Jr. 
+             I am a freelancer web developer. <br>Are you looking for
+             someone to help build your online business then you made 
+            the right person. Let me help you and I'll be looking forward to 
+            working with you.</h3></p>
+        
+     </section>
+
+    <section id="about">
+        <h1 class="headings">ABOUT ME</h1>
+       <div id="pic">
+    <div id="intro">
+      <h2>WHO AM I</h2>
+     <P>I am an IT student of Eastern Visayas State University(EVSU), a beginner in web developing who is eager to learn more about web design.
+        I like being creative and problem solving with team, regardless of what medium I'm working in.
+     </P><br>
+     <h2>FUN FACT</h2>
+            <p>I enjoy making web design like I feel inferior when it's done.
+                <br>I love watching anime and most of my web style are came from anime.</p>
+     </section>
+   
+    <section id="myjob">
+        <h1 class="headings">MY JOB</h1>
+        <div class="gallery">
+            <img src="onlinesale.png" alt="">
+            <b>Online Seller</b>
+            <img src="wedev.png" alt="">
+            <b>Freelancer Web Developer</b>
+            <img src="editor.png" alt="">
+            <b>Video Editor</b>
+            <img src="graphicd.png" alt="">
+            <b>Graphic Designer</b>
+
+        
+        </div>
+    </section>
+
+    <section id="skills">
+        <h1 class="headings">SKILLS</h1>
+    <div class="row">
+        <div class="htmlA1"><img src="htmllogo.png"></div><div class="hp"></div>          
+        <div class="cssA1"><img src="css3logo.png"></div> <div class="cp"></div>   
+        <div class="jsA1"><img src="jslogo.png"></div><div class="jp"></div>   
+        <div class="phpA1"><img src="php.png"></div><div class="pp"></div>   
+        <div class="mysqlA1"><img src="mysql.png"></div><div class="mp"></div>
+        <div class="pyA1"><img src="pythonA3.png"></div><div class="pyp"></div>
+    </div>
+    </section>
+
+      <section id="contact">
+        <h1 class="headings">CONTACT</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input"placeholder="Enter Your Name" >
+            <input type="email"name="email" 
+            class="input" placeholder="Enter Your Email">
+            <textarea name="msg" id="msg" cols="25" rows="10" placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="SEND" id="send">
+        </form>
+
+        
+      
+    </section>
+</body>
+
+</html>
