@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <style>
+        body{
+            position: absolute;
+            width: 100%;
+        }
         *{
     margin: 0;
     padding: 0;
@@ -18,10 +22,9 @@ html{
 .navbar{
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    top:0;
+    position: fixed;
+    top:100px;
     left: auto;
-    
 }
 .a1{
     position: fixed;
@@ -32,14 +35,14 @@ html{
 }
 .a2{
     position: fixed;
-    left: 75px;
+    left: 70px;
     top: 10px;
     border: solid 1px;
     background: #3212a752;
 }
 .a3{
     position: fixed;
-    left: 140px;
+    left: 130px;
     top: 10px;
     border: solid 1px;
     background: #3212a752;
@@ -88,13 +91,14 @@ a{
 #home::before{
     content:"";
     position: absolute;
-    top: 0%;
-    left: 0%;
-    height: 900px;
-    width: 100%;
-    background: url('hpic.jpg') no-repeat center center/cover;
+    top: 20px;
+    left: -10%;
+    height: 800px;
+    width: 420px;
+    background: url('Untitled2_20221219214349.png') no-repeat center center/cover;
     z-index: -1;          
     opacity: .8;
+    object-fit: contain;
 }
 .main{
     display: flex;
@@ -119,7 +123,7 @@ a{
     box-sizing: border-box;
     padding: 20px;
     margin-bottom: 50px;
-    background-color: transparent;
+    background-color: #d5fff4;
     
 
 
@@ -147,6 +151,7 @@ a{
     display: flex;
     flex-direction: column;
     background-color:grey;
+    color: white;
 }
 .gallery{
     display: list-item;
@@ -161,11 +166,12 @@ a{
     margin: 10px;
     border-radius: 30px;
     left: 30px;
+    opacity: .8;
 }
 .j1{
     position: relative;
     top: -70px;
-    left: 150px;
+    left: 150px;    
    }
 .j2{
     position: relative;
@@ -183,16 +189,21 @@ a{
     left: 150px;
    }
 /* Skills Section */
-#services{
+#skills{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    background: #232829;
 }
 .row{
     display: list-item;
     justify-content: space-evenly;
     flex-wrap: wrap;
     box-sizing: border-box;
+    opacity: .8;
+}
+.row img{
+    opacity: .8;
 }
 .htmlA1 img, .cssA1 img, .jsA1 img, .phpA1 img, .mysqlA1 img, .pyA1 img{
     position: relative;
@@ -218,7 +229,7 @@ a{
     left: 130px;
     height: 20px;
     width: 50%;
-    background: #eb2222;
+    background: #eb222296;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -228,7 +239,7 @@ a{
     top: -60px;
     height: 20px;
     width: 60%;
-    background: #2b5d96;
+    background: #2b5d9677;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -238,7 +249,7 @@ a{
     top: -60px;
     height: 20px;
     width: 40%;
-    background: #e4e726;
+    background: #e4e7267a;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -248,7 +259,7 @@ a{
     top: -50px;
     height: 20px;
     width: 40%;
-    background: #1768b4;
+    background: #1768b488;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -258,7 +269,7 @@ a{
     top: -50px;
     height: 20px;
     width: 35%;
-    background: #ec9d09a4;
+    background: #ec9c0979;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -322,7 +333,7 @@ a{
     <nav class="navbar">
         
             <a class="a1" href="#home"><h5>HOME</h5></a>
-            <a class="a2" href="#about"><h5>ABOUT</h5</a>
+            <a class="a2" href="#about"><h5>ABOUT</h5></a>
             <a class="a3" href="#myjob"><h5>MY JOB</h5></a>
             <a class="a4" href="#skills"><h5>SKILLS</h5></a>
             <a class="a5" href="#contact"><h5>CONTACT</h5></a>
@@ -384,9 +395,9 @@ a{
       <section id="contact">
         <h1 class="headings">CONTACT</h1>
         <form action="" class="form">
-            <input type="text" name="name" class="input"placeholder="Enter Your Name" >
+            <input type="text" name="name" class="input"placeholder="Your Name" >
             <input type="email"name="email" 
-            class="input" placeholder="Enter Your Email">
+            class="input" placeholder="Your Email">
             <textarea name="msg" id="msg" cols="25" rows="10" placeholder="Enter Your Message"></textarea>
             <input type="submit" value="SEND" id="send">
         </form>
